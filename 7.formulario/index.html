@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+</head>
+<body>
+    <form id="dataform" method="post"action="./backend/receive.php">
+        <label for="">nombre</label>
+        <input type="text"
+        id=" name"
+        name="name"
+     placeholder="introduce tu nombre"
+      minlength="3"
+      maxlength="50"
+      pattern=""
+      title="introduce al menos 3 caracteres maximo 50"
+      tabindex="0"
+      autofocus="true"
+      autocomplete="off"
+      required
+      ><br><br>
+      <select id="typedocument" name="typedocument">
+        <option value="nada" select="selected">selecione un tipo de documento</option>
+        <option value="cc"> cedula de identidad</option>
+        <option value="ti">tarjeta de idntidad</option>
+        <option value="ce">cedula de extranjeria</option>
+      </select
+       min="2" max="99" tabindex="1">
+       <label for="estado civil"> estados cicvil</label>
+       <input type="radio" name="ecivil"id="ecivil" value="soltero">soltero
+       <input type="radio" name="ecivil"id="ecivil"value="casado">casado
+       <input type="radio" name="ecivil"id="ecivil" value="divorciado">divorciado
+       <input type="radio" name="ecivil"id="ecivil" value="viudo">viudo
+       <fieldset><legend>informacion de estudio y otros</legend>
+        <label for="colores">color favorito</label>
+        <input type="color" id="colores">
+        <label for="dateInsc">fecha de inscripicion</label>
+        <input type="date" id="start" name="trip-start"
+       value="2022-07-22"
+       min="2000-01-01" max="2100-12-31">
+       <label for="telefono"> ingrese su numero:</label>
+       <label for="semana">semana de inscripicion:</label>
+       <input type="semana" name="semana" id="semana de inscripicion"
+              min="1950-W18" max="2100-W26" required>
+       <input type="tel" id="telefono" name="telefono"
+              pattern="[0-10]{3}-[0-10]{3}-[0-10]{4}"
+              required>
+       
+       <small>ingrese el formato: +57 colombia</small>
+       <br><br>
+       <label for="semana"> eliga la semana de inscripicion </label>
+       <input type="semana" name="semana" id=" semana de inscricion"min="1980-w20" max="2040-w40" requirimiento>
+       <br><br>
+        <label for="url">Ingrese una https:// URL:</label>
+        <input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" size="30" required>
+        <br><br>
+        <form>
+            <div class="controls">        
+                <label for="id">ID de usuario:</label>
+                <input type="text" id="id" name="id" />        
+                <input type="reset" value="Reset"> 
+            </div>
+            <br>
+            <label for=" tu deporte "> escribe tu deporte favorito</label>
+            <input list=" lista-de-deporte" id="tu-deporte" name="tu-deporte" /> 
+            <datalist id="lista de deporte">
+              <option value="futboll">
+              <option value="voleyball">
+              <option value="tennis">
+              <option value ="baloncesto"> 
+        </form>
+       </fieldset> 
+       <hr>
+       <label for="lenguajes">lenguajes de programacion</label>
+       <select id="lenguajes" name="lenguajes">
+          <optgroup label="lenguajes no tipados">
+            <option value="java">java</option>
+            <option value="csharp">c#</option>
+            <option value="c">c++</option>
+          </optgroup>
+          <optgroup label="lenguajes no tipados">
+            <option value="python"></option>
+            <option value="javascript"></option>
+          </optgroup>
+       </select><br><br><br>
+       <form>
+        <div>
+          <label for="title">titulo  hola:</label>
+          <input type="text" id="title" name="title" value="los deportes del año">
+        </div>
+        <div>
+          <label for="content">Post content:</label>
+          <textarea id="content" name="content" cols="60" rows="5">
+            practica siempre actividad fisica. 
+          </textarea>
+        </div>
+        <div>
+          <button type="submit">cargar sitio</button>
+        </div>
+        <input type="hidden" id="postId" name="postId" value="34657">
+      </form>
+      <br><br>
+       <label for="acepta">aceptar terminos</label>
+       <input type="chackbox" id="terminos">
+       <hr>
+       <input type="submit" value="envio de datos"><!--php-->
+       <button id="validar">validar</button><!--js-->
+       <!--otros inpunts consultar:time,range,tel week,url,
+      reset,textarea,datalist y hidden-->
+    </form>
+    <script src="./sricps/main.js"></script>
+</body>
+</html>
